@@ -1,0 +1,126 @@
+/* start sertificates styles */
+
+#index .sertificates {
+    margin-left: calc(50% + 30px);
+    padding-top: 1px;
+    clear: right;
+    
+    
+}
+    
+.sertificates {
+    margin-bottom: 15px;
+    padding-top: 20px;
+    text-align: justify;
+	    top: -35px;
+    
+        &.slick-slider .slick-list { 
+            margin: 0px -20px;
+            padding: 75px 25px 40px;
+        }
+        
+        .sert {
+            margin: 0 30px 25px;
+            width: calc(20% - 30px);
+            position: relative; 
+            @include transition(all);
+            background: #fff;
+            display: inline-block;
+            vertical-align: top;
+	    position: relative;
+	    
+	    &:before {
+		content: '';
+		position: absolute;
+		width: 0;
+		left: 0;
+		height: 0;
+		top: 0;
+		background: #1061c1 url(images/sert_hover.jpg) no-repeat center top / cover;
+		@include transition(all);
+	    }
+            
+            &:hover{
+                box-shadow: 0px -10px 15px rgba(0, 0, 0, 0.21);
+		transform: scale(1.33);
+		
+		&:before {
+		    width: 95%;
+		    left: 15%;
+		    height: 111%;
+		    top: -6%;
+		}
+            }
+            
+            img {
+                width: 100%;
+            }
+            
+            a {
+                display: block;
+		position: relative;
+		z-index: 2;
+                
+                &:hover{
+		    
+                } 
+                
+            }
+        }
+        
+    }
+    
+
+
+//@media screen and (max-width: 1600px) {
+//    #sertificates {
+        
+        
+//    }
+//}
+
+@media screen and (max-width: 1300px){
+    #index .sertificates {
+	//margin-left: calc(50% + 30px);
+    }
+}
+@media screen and (max-width: 999px) {
+    #index .sertificates {
+        margin-left: 20px;
+	//margin-right: 20px;
+    }
+    
+     
+    .sertificates {
+        .sert {
+            &:hover{
+		transform: scale(1.23);
+	    }
+	  
+	}
+    }
+}
+@media screen and (max-width: 800px) {
+    #index .sertificates {
+        margin-left: 0;
+	margin-bottom: 0;
+	margin-top: -35px;
+	top: 0;
+    }
+}
+
+@media screen and (max-width: 590px) {
+}
+
+@media screen and (max-width: 450px) {
+    .sertificates {
+        .sert {
+            &:hover{
+		transform: scale(1.13);
+	    }
+	  
+	}
+    }
+}
+
+/* end sertificates styles */

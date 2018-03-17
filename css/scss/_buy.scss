@@ -1,0 +1,271 @@
+/* start buy styles */
+
+#buy {
+    //background-color: #fff;
+    overflow: visible;
+    background: url(images/corner_bg.png) no-repeat center top ;
+    z-index: 2;
+    
+    .in {
+	padding: 390px 20px 475px;
+	background: url(images/corner_bg_in.png) no-repeat center top / 100% auto;
+	@include transition_slow(all);
+    }
+    
+    .img_block {
+	position: absolute;
+	top: 28px;
+	left: 12.4%;
+	z-index: 2;
+	width: 1164/1560*100%;
+	text-align: center;
+	
+	img {
+	    max-width: 100%;
+	}
+    }
+    
+    .left_block {
+	position: relative;
+	z-index: 5;
+	color: #fff;
+	width: 530/1560*100%;
+	max-width: 530px;
+    }
+    
+    .info {
+	float: right;
+	width: 50%;
+	color: #fff;
+	font-size: 17px;
+	line-height: 170%;
+	margin-top: -43px;
+	@include transition_slow(all);
+	
+	ul {
+	    counter-reset: number2;
+	    padding-left: 70px;
+	}
+	
+	li {
+	    position: relative;
+	    padding-left: 40%;
+	    margin-bottom: 15px;
+	    min-height: 120px;
+	    
+	    &:before {
+		counter-increment: number2;
+		content: "0" counter(number2);
+		display: block;
+		color: #ff8700;
+		font-weight: 900;
+		font-size: 20px;
+		margin-bottom: 5px;
+	    }
+	    
+	    &:after {
+		content: '';
+		position: absolute;
+		top: 48px;
+		left: 0;
+		width: 39%;
+		border-bottom: 1px dotted #fff;
+	    }
+	    
+	    strong {
+		text-transform:  uppercase;
+		font-size: 20px;
+	    }
+	}
+    }
+}
+    
+    
+@media screen and (max-width: 1600px) {
+    #buy {
+	.in {
+	    padding: 390px 20px 475px;
+	    margin-top: -45px;
+	}
+	
+	.left_block {
+	    width: 570/1560*100%;
+	}
+    } 
+}
+@media screen and (max-width: 1450px) {
+    #buy {
+	.in {
+	    padding: 310px 20px 475px;
+	}
+    }
+}
+@media screen and (max-width: 1300px){
+    #buy {
+	.in {
+	    padding: 260px 20px 425px;
+	}
+	
+	.left_block {
+	    width: 620/1560*100%;
+	}
+	
+	.info {
+	    width: 55%;
+	    font-size: 16px;
+	    line-height: 150%;
+	    
+	    li {
+		padding-left: 30%;
+		min-height: 110px;
+		
+		&:before, strong {
+		    font-size: 19px;
+		}
+		
+		&:after {
+		    width: 29%;
+		}
+	    }
+	}
+    } 
+}
+
+@media screen and (max-width: 1150px) {
+    #buy {
+	.in {
+	    padding: 260px 20px 290px;
+	}
+    }
+}
+@media screen and (max-width: 1000px) {
+    #buy {
+	.in {
+	    padding: 260px 20px 190px;
+	}
+	.left_block {
+	    width: 620/1560*100%;
+	    margin-top: -30px;
+	}
+	.info {
+	    width: 55%;
+	    font-size: 14px;
+	    line-height: 150%;
+	    
+	    li {
+		
+		&:before, strong {
+		    font-size: 17px;
+		}
+		&:after {
+		    top: 36px;
+		}
+	    }
+	}
+    }
+}
+@media screen and (max-width: 900px) {
+    #buy {
+	.in {
+	    padding: 205px 20px 190px;
+	}
+    }
+}
+@media screen and (max-width: 800px) {
+    #buy {
+	.in {
+	    //padding: 120px 20px 190px;
+	}
+	.left_block {
+	    margin-top: -50px;
+	}
+	.info {
+	    width: 60%;
+	    font-size: 12px;
+	    line-height: 150%;
+	    
+	    li {
+		min-height: inherit;
+		
+		&:before, strong {
+		    font-size: 15px;
+		}
+		&:after {
+		    top: 36px;
+		}
+	    }
+	}
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #buy { 
+	//display: none;
+	.in {
+	    padding: 200px 20px 140px;
+	    background-size: 700px auto;
+	}
+	.left_block {
+	    width: 45%;
+	    margin-top: -40px;
+	}
+	
+	.img_block {
+	    display: none;
+	}
+	.info {
+	    width: 54%;
+	    font-size: 12px;
+	    line-height: 150%;
+	    
+	    li {
+		padding-left: 0%;
+		
+		&:before, strong {
+		    font-size: 15px;
+		}
+		&:after {
+		    display: none;
+		}
+	    }
+	}
+	
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    #buy { 
+	//display: none;
+	.in {
+	    padding: 160px 20px 140px;
+	    background-size: 600px auto;
+	}
+	.left_block {
+	    width: auto;
+	    margin-top: 0px;
+	    min-height: 220px;
+	    text-align:  center;
+	}
+	
+	.info {
+	    display: none;
+	}
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #buy { 
+	//display: none;
+	.in {
+	    padding: 110px 20px 70px;
+	    background-size: 500px auto;
+	}
+	.left_block {
+	    margin-top: 0px;
+	    min-height: 220px;
+	}
+    }
+}
+
+/* end buy styles */

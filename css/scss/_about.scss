@@ -1,0 +1,136 @@
+/* start about styles */
+
+#about {
+    //z-index: 2;
+    overflow: visible;
+    background: #fff url(images/about_bg.jpg) no-repeat center / cover;
+    padding-top: 315px;
+    margin-top: -335px;
+    
+    
+    .in {
+	padding: 40px 20px;
+	z-index: 10;
+    }
+    
+    
+    .left_block {
+        width: 42%;
+	@include transition_slow(all);
+	
+	p {
+	    letter-spacing: 0.3px;
+	}
+    }
+    
+    h4 {
+	float: right;
+	margin-right: 123px;
+	font-size: 20px;
+	font-weight: 700;
+	margin-top: 7px;
+	letter-spacing: 0.4px;
+	
+	&:before {
+	    content: "// ";
+	    color: $color_a;
+	}
+    }
+    
+    .att {
+	color: #002f7d;
+	font-weight: 700;
+	padding: 10px 15px;
+	border-left: 2px solid #002f7d;
+	line-height: 160%;
+	margin-bottom: 30px;
+	
+	p {
+	    margin-bottom: 0;
+	    
+	}
+    }
+}
+    
+
+p.big {
+    font-size: 150%;
+    line-height: 145%;
+}
+
+//@media screen and (max-width: 1600px) {
+//}
+
+@media screen and (max-width: 1300px){
+    #about {
+	.left_block {
+	    width: 47%;
+	}
+    }
+    
+}
+@media screen and (max-width: 1000px) {
+    #about {
+	.left_block {
+	    width: 57%;
+	}
+	h4 {
+	    margin-right: 0px;
+	    font-size: 18px;
+	    letter-spacing: 0;
+	}
+    }
+    
+}
+@media screen and (max-width: 800px) {
+    #about {
+	.left_block {
+	    width: auto;
+	    float:  none;
+	    margin-bottom: 30px;
+	}
+	h4 {
+	    float: none;
+	}
+	
+	.in {
+	    padding-bottom: 0;
+	    &:after {
+		display: none;
+	    }
+	}
+    }
+    
+}
+
+@media screen and (max-width: 590px) {
+    #about { 
+    }
+        .video {
+            height: 250px;
+            a span {
+                line-height: 380px;
+            }
+        }
+        
+        main .video {
+            float: none;
+            width: auto;
+            max-width: none;
+            margin-right: auto;
+            margin-left: auto;
+        }
+}
+
+@media screen and (max-width: 450px) {
+    #about {
+    }
+        .video {
+            height: 170px;
+            a span {
+                line-height: 250px;
+            }
+        }
+}
+
+/* end about styles */

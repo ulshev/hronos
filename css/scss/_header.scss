@@ -1,0 +1,483 @@
+
+/* start header styles */
+#header {
+    min-height: 60px;
+    width: 100%;
+    position: absolute; //fixed;
+    top: 0;
+    color: #fff;
+    z-index: 2;
+    border-bottom: 1px solid #c6c6c6;
+    padding-bottom: 1px;
+    @include transition(all);
+    
+    &:after {
+	content: "";
+	display: block;
+	height: 1px;
+	width: 100%;
+	background: url(images/header_border.png) no-repeat left top / 100% 100%;
+    }
+	
+    &.scroll {
+	background: rgba(255,255,255, 0.9);
+	padding-bottom: 0px;
+	padding-top: 0;
+	box-shadow: 0 0 20px rgba(33, 97, 143, 0.25);
+    }
+    
+    .in {
+	padding-top: 25px;
+    }
+    
+    
+    #logo {
+	margin-right: 40px;
+	float: left;
+	font-size: 35px;
+	color: #fff;
+        
+        a:hover {
+            opacity: 0.8;
+        }
+    }
+    nav {
+	margin: -22px 0px 0px;
+	padding: 0;
+	text-align: center;
+	//font-size: 18px;
+	@include transition(all);
+	
+    }
+}
+    a.order_call {
+	float: right;
+	margin-left: 52px;
+	margin-top: 12px;
+	//margin-right: 30px;
+	position: relative;
+	margin-bottom: 10px;
+	color: #ff8600;
+	text-decoration: none;
+	padding-left: 45px;
+	position: relative;
+	font-weight: 500;
+	letter-spacing: 1px;
+	@include transition(all);
+	
+	
+	&:before, &:after {
+	    content: '';
+	    position: absolute;
+	    top: 50%;
+	    left: 0;
+	    margin-top: -17px;
+	    width: 34px;
+	    height: 34px;
+	    background-image: url(images/icon_order_call.png);
+	    background-repeat: no-repeat;
+	    @include transition(opacity);
+	}
+	&:before {
+	    background-position: left center;
+	    opacity: 1;
+	}
+	&:after {
+	    background-position: right center;
+	    opacity: 0;
+	}
+	span {
+	    border-bottom:  2px dotted #ff8600;
+	}
+	
+	&:hover {
+	    color: #ca5301;
+	    
+	    &:before {
+		opacity: 0;
+	    }
+	    &:after {
+		opacity: 1;
+	    }
+	    span {
+		border-color: #ca5301;
+	    }
+	}
+    }
+    
+    .tel  {
+	float: right;
+	font-size: 19px;
+	line-height: 145%;
+	margin-top: 5px;
+	margin-left: 63px;
+	padding-top: 7px;
+	padding-left: 46px;
+	position: relative;
+	    
+	&:before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		margin-top: -17px;
+		left: 0;
+		width: 34px;
+		height: 34px;
+		background: url(images/icon_tel.png) left center no-repeat;
+	    }
+        
+        a {
+            text-decoration: none;
+	    color: #fff;
+	    @include transition(color);
+	    
+	    &:hover, &:focus {
+		opacity: 0.8
+	    }
+        }
+    }
+    
+    .menu_button_mob {
+        display: none;
+    }
+    ul.main_menu {
+        text-align: justify;
+        line-height: 0;
+        &:after {
+    	    content: "";
+    	    display: inline-block;
+    	    width: 100%;
+    	}
+	    
+            >li {
+                margin-right: 0;//1%;
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                position: relative;
+		line-height: 150%;
+		letter-spacing: 0.5px;
+		padding: 33px 10px 10px;
+		height: 38px;
+		
+		&.show a:before {
+		    width: 100%;
+		    margin-left: -50%;
+		}
+            }
+            a {
+		display: inline-block;
+		position: relative;
+		z-index: 2;
+		text-decoration: none;
+		color: #fff;
+		@include transition(all);
+		vertical-align: middle;
+		
+		&:before {
+		    content: "";
+		    position: relative;
+		    width: 13px;
+		    height: 15px;
+		    background-color: #ff8c00;
+		    @include transition(all);
+		    margin-right: 15px;
+		    margin-bottom: -3px;
+		    display: none;
+		    -moz-transform: skewX(-15deg); /* Для Firefox */
+		    -ms-transform: skewX(-15deg); /* Для IE */
+		    -webkit-transform: skewX(-15deg); /* Для Safari, Chrome, iOS */
+		    -o-transform: skewX(-15deg); /* Для Opera */
+		    transform: skewX(-15deg);
+		}
+		
+		&:hover {
+		    text-decoration: underline;
+		}
+		
+            }
+	    
+	    .active a, a.active  {
+		&:before {
+		    display: inline-block;
+		}
+	    }
+	    
+	    ul {
+		position: absolute;
+		width: 245px;
+		padding: 10px 0;
+		background-color: #0b399b;
+		left: 50%;
+		margin-left: -122px;
+		top: 90px;
+		display: none;
+		
+		&
+		
+		>li {
+		   display: block; 
+		}
+		a {
+		    display: block;
+		    padding: 10px 15px;
+		    &:before {
+			display: none !important;
+		    }
+		}
+		
+		.active a, a.active, a:hover  {
+		    background-color: #0b59d5;
+		    text-decoration: none;
+		}
+	    }
+	    
+        }
+	
+	.scroll ul.main_menu a {
+	    padding-top: 30px;
+	}
+ 
+@media screen and (max-width: 1640px) {
+    #header {
+	#logo {
+	    margin-right: 14px;
+	}
+	a.button {
+	    margin-left: 25px;
+	}
+    }  
+}
+@media screen and (max-width: 1450px) {
+    #header {
+	#logo {
+	    margin-right: 10px;
+	}
+	a.order_call {
+	    margin-left: 15px;
+	}
+	.tel {
+	    margin-left: 15px;
+	    padding-left: 40px;
+	}
+    }
+    
+    ul.main_menu {
+	>li {
+	    padding: 33px 5px 10px;
+	}
+	a::before {
+	margin-right: 7px;
+	}
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    #header {
+	padding-top: 0;
+	.in {
+	    padding-top: 22px;
+	    padding-bottom: 15px;
+	}
+	#logo {
+	    margin-right: 25px;
+	}
+	
+	a.order_call {
+	    margin-right: 80px;
+	    margin-left: 30px;
+	}
+	
+	nav {
+            right: 20px;
+	    top: 25px;
+	    width: 40px;
+	    height: 40px;
+	    position: absolute;
+	    margin: 0;
+	    
+	    border: 1px solid $color_a;
+	    border-radius: 25px;
+	}
+    }
+	    
+	    .menu_button_mob {
+		height: 9px;
+		border-bottom: 3px solid $color_a;
+		border-top: 3px solid $color_a;
+		//border-radius: 3px;
+		display: block;
+		width: 23px;
+		position: absolute;
+		top: 13px;
+		left: 8px;
+		cursor: pointer;
+		
+		&:after {
+		    content: '';
+		    position: absolute;
+		    z-index: 2;
+		    height: 3px;
+		    width: 100%;
+		    top: 3px;
+		    left: 0;
+		    background-color: $color_a;
+		}
+		&:before {
+		    content: '';
+		    position: fixed;
+		    right: 20px;
+		    top: 25px;
+		    width: 40px;
+		    height: 40px;
+		    z-index: 1;
+		    //display: none;
+		}
+		&.active:before {
+		    //display: block;
+		    width: 100%;
+		    height: 100%;
+		    top: 0;
+		    left: 0;
+		}
+	    }
+	    ul.main_menu {
+		position: absolute;
+		z-index: 3;
+		min-width: 245px;
+		right: -10px;
+		margin-top: 0px;
+		top: 50px;
+		padding: 15px 0px;
+		background-color: $color_a; //rgba(255, 255, 255, 0.9);
+		//box-shadow: 0 0 5px rgba(0,0,0,0.3);
+		box-shadow: 0 5px 10px rgba(33, 97, 143, 1.25);
+		display: none;
+		//max-height: 400px;
+		overflow-x: hidden;
+		
+		>li {
+		    //margin-right: 0;
+		    display: block;
+		    //text-align: right;
+		    //font-size: 18px;
+		    height: auto;
+		    padding: 0 15px;
+		    margin-bottom: 5px;
+		    text-align: left;
+		}
+		    
+		a {
+		    display: block;
+		    padding: 10px 0 10px;
+		    
+		    &:before {
+		        display: block;
+		        opacity: 0;
+		    }
+		}
+		.active a, a.active  {
+		    &:before {
+			opacity: 1;
+		    }
+		}
+		ul {
+		    position: relative;
+		    top: 0px;
+		}
+	    }
+}
+
+@media screen and (max-width: 999px) {
+    
+}
+
+@media screen and (max-width: 800px) {
+    #header {
+	#logo {
+	    margin-right: 0px;
+	    width: 120px;
+	    
+	    img {
+		max-width: 100%;
+	    }
+	}
+	a.order_call {
+	    margin-right: 50px;
+	    margin-left: 10px;
+	    margin-top: 8px;
+	}
+	nav {
+	    top: 22px;
+	}
+	.tel {
+	    font-size: 17px;
+	    line-height: 145%;
+	    margin-top: 5px;
+	    margin-left: 10px;
+	    padding-top: 5px;
+	    padding-left: 40px;
+	}
+    } 
+}
+
+@media screen and (max-width: 590px) {
+    #header {
+	a.order_call {
+	    display: none;
+	}
+	
+	.tel {
+	    margin-right: 50px;
+	}
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #header {
+	.in {
+	    padding-top: 17px;
+	}
+	#logo {
+	    margin-right: 0px;
+	    width: 95px;
+	}
+	.tel {
+	    margin-top: 0px;
+	    margin-right: 30px;
+	    font-size: 15px;
+	    padding-left: 32px;
+	    
+	    &:before {
+		margin-top: -12px;
+		width: 26px;
+		height: 26px;
+		//background-size: auto 26px;
+		background-position: -4px center;
+		border-radius: 13px;
+	    }
+	}
+	nav {
+	    top: 17px;
+	    width: 30px;
+	    height: 30px;
+	    right: 10px;
+	}
+    }
+	    
+	    .menu_button_mob {
+		height: 8px;
+		border-bottom: 2px solid $color_a;
+		border-top: 2px solid $color_a;
+		width: 18px;
+		top: 10px;
+		left: 6px;
+		
+		&:after {
+		    height: 2px;
+		    top: 3px;
+		}
+	    }
+}
+
+/* end header styles */

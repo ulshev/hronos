@@ -1,0 +1,396 @@
+/* start forms styles */
+
+.main_section.section_bg {
+    background: url(images/form_bg.jpg) no-repeat center / cover;
+}
+.section_bg .form_block {  
+    margin-left: 50%;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    padding-left: 25px;
+    
+    .h2, h2 {
+	text-transform: none;
+	font-size: 60px;
+	letter-spacing: 3px;
+	margin-left: -5px;
+	margin-bottom: 5px;
+    } 
+    
+    .h2 + p {
+	font-size: 16px;
+	line-height: 130%;
+	letter-spacing: 0.5px;
+	margin-bottom: 35px;
+    }
+}
+.form_block { 
+    
+    
+    form {
+	max-width: 450px;
+	//letter-spacing: 1.4px;
+	font-weight: 300;
+	a {
+	    color: #fff;
+	    text-decoration: none;
+	    
+	    &:hover {
+		text-decoration: underline;
+	    }
+	}
+    }
+    input, textarea, select {
+	padding: 5px 10px;
+	margin: 0 7px 20px;
+	width: 100%;
+	max-width: 375px;
+	height: 60px;
+	outline: none;
+	border: 1px solid transparent;
+	border-bottom: 1px solid #fff;
+	background:none;
+	border-radius: 0spx;
+	font-family: $font_family_os;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 58px;
+	color: #1f84d7;
+        vertical-align: middle;
+	box-sizing: border-box;
+	@include transition(background);
+	
+	
+	&::-webkit-input-placeholder {opacity: 1; color: #fff;}
+	&::-moz-placeholder          {opacity: 1; color: #fff;}/* Firefox 19+ */
+	&:-moz-placeholder           {opacity: 1; color: #fff;}/* Firefox 18- */
+	&:-ms-input-placeholder      {opacity: 1; color: #fff;}
+	
+    }
+    
+    
+    .gUniForm input[type="text"] {
+	padding: 5px 20px;
+	height: 49px;
+    }
+    textarea {
+	    margin-left: 0;
+	    height: 140px;
+	    border: 1px solid rgba(255, 255, 255, 0.33);
+	    border-radius: 15px;
+    }
+    
+    input[type="radio"], input[type="checkbox"] {
+	width: auto;
+	height: auto;
+	margin-bottom: 0;
+	opacity: 0;
+	margin-left: -2px;
+	position: absolute;
+	margin-right: 0;
+    }
+    
+    input[type="checkbox"] + label, &.gUniForm input[type="checkbox"] + label {
+	display: inline-block;
+	//padding-left: 30px;
+	position: relative;
+	//margin-left: -15px;
+	margin-bottom: 30px;
+	//vertical-align: middle;
+	border: 1px solid transparent;
+	font-weight: 300;
+	font-size: 16px;
+	margin-top: 10px;
+	cursor: pointer;
+	
+	
+	&:before {
+	    content: '';
+	    float: left;
+	    margin-right: 10px;
+	    width: 28px;
+	    height: 28px;
+	    
+	    border: 1px solid #fff;
+	    border-radius: 25px;
+	    
+	}
+	
+	&:hover:before {
+	    opacity: 0.8;
+	}
+    }
+    //input[type="checkbox"]:not(checked) + label {
+	///&:hover:before {
+	    ///background-position: left top;
+	///}
+    //}
+    input[type="checkbox"]:checked + label {
+	&:before {
+	    background: url(images/checkbox.png) no-repeat center;
+	    border-color: rgba(13, 157, 246, 0.6);
+	}
+    }
+    //input[type="checkbox"]:not(checked) + label {
+	//&:hover:before {
+	//    background-position: left bottom;
+	//}
+    //}
+    input[type="checkbox"] + label + a {
+	display: inline-block;
+	//vertical-align: middle;
+	margin-bottom: 30px;
+	//margin-right: 30px;
+	margin-top: 10px;
+    }
+    
+    textarea, input.textarea {
+	    min-width: 100%;
+	    max-width: 100%;
+	    min-height: 80px;
+	    max-height: 100px;
+	    resize: none;
+	    margin-bottom: 25px;
+    }
+    button[type="submit"] {
+	    margin-right: 0;
+	    margin-bottom: 30px;
+	    padding: 0 10px 0 10px;
+	    width: 195px;
+	    height: 51px;
+	    line-height: 49px;
+	    font-size: 14px;
+	    font-weight: 400;
+	    background-color: #fff;
+	    color: #fff;
+	    cursor: pointer;
+	    box-sizing: border-box;
+	    @include transition(all);
+	    border: 0;
+	    border-radius: 3px;
+	    text-align: center;
+	    position: relative;
+	    vertical-align: middle;
+	    
+	    &:after {
+		content: "";
+		display: inline-block;
+		width: 11px;
+		height: 11px;
+		margin-left: 10px;
+		vertical-align: -1px;
+		background: url(images/arrow_white.png) right center no-repeat;
+	}
+    }
+    button.blue {
+	background: #0d9df6;
+	box-shadow: 0 4px 10px rgba(13,157,246,0.45);
+	border-bottom: 2px solid #0a5c8e;
+	
+	&:hover {
+		background-color: #0079ff;
+	}
+	&:active {
+		box-shadow: 0 4px 10px rgba(13,157,246,0.65);
+	}
+}
+button.orange {
+	background: #ff7b00;
+	box-shadow: 0 4px 10px rgba(255,139,0,0.45);
+	border-bottom: 2px solid #9f5500;
+	
+	background: -webkit-linear-gradient(right, #ff9c00 0%, #ff5b00 100%); /* для webkit-браузеров */
+	background: -moz-linear-gradient(right, #ff9c00 0%, #ff5b00 100%); /* для firefox 3.6+ */
+	background: -o-linear-gradient(right, #ff9c00 0%, #ff5b00 100%); /* для Opera 11.10+ */
+	background: -ms-linear-gradient(right, #ff9c00 0%, #ff5b00 100%); /* для IE10+ */
+	background: linear-gradient(to left, #ff9c00 0%, #ff5b00 100%);
+	
+	&:hover {
+		background-color: #d46702;
+		background: -webkit-linear-gradient(right, #e68e04 0%, #c44600 100%); /* для webkit-браузеров */
+		background: -moz-linear-gradient(right, #e68e04 0%, #c44600 100%); /* для firefox 3.6+ */
+		background: -o-linear-gradient(right, #e68e04 0%, #c44600 100%); /* для Opera 11.10+ */
+		background: -ms-linear-gradient(right, #e68e04 0%, #c44600 100%); /* для IE10+ */
+		background: linear-gradient(to left, #e68e04 0%, #c44600 100%);
+	}
+	&:active {
+		box-shadow: 0 4px 10px rgba(255,139,0,0.65);
+	}
+}
+    
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1600px) {
+    .section_bg .form_block { 
+	padding-top: 90px;
+	
+	.h2, h2 {
+	    font-size: 50px;
+	    letter-spacing: 2.5px;
+	} 
+    }
+}
+@media screen and (max-width: 1450px) {
+    .section_bg .form_block { 
+	padding-top: 70px;
+	padding-bottom: 30px;
+	
+    }
+}
+@media screen and (max-width: 1300px)  {
+    .section_bg .form_block { 
+	//padding-top: 50px;
+	padding-bottom: 20px;
+	
+	.h2, h2 {
+	    font-size: 40px;
+	    letter-spacing: 2px;
+	}
+	.h2 + p {
+	    font-size: 15px;
+	    line-height: 130%;
+	    letter-spacing: 0.5px;
+	    margin-bottom: 20px;
+	}
+    }
+    .form_block {  
+	input[type="checkbox"] + label, &.gUniForm input[type="checkbox"] + label {
+	    font-size: 14px;
+	}
+    }
+}
+@media screen and (max-width: 1150px)  {
+    .section_bg .form_block { 
+	padding-top: 50px;
+    }
+    
+}
+@media screen and (max-width: 999px) {
+    .section_bg .form_block { 
+	
+	.h2, h2 {
+	    font-size: 35px;
+	}
+	.h2 + p {
+	    font-size: 14px;
+	    line-height: 130%;
+	    letter-spacing: 0.5px;
+	    margin-bottom: 20px;
+	}
+    }
+    
+    .form_block {  
+	input, textarea, select {
+	    margin-bottom: 15px;
+	}
+    
+	input[type="checkbox"] + label, &.gUniForm input[type="checkbox"] + label {
+	    display: block;
+	    margin-bottom: 0px;
+	    font-size: 14px;
+	    //margin-top: 0px;
+	}
+	input[type="checkbox"] + label + a {
+	    margin-right: 0px;
+	    margin-top: 0px;
+	    font-size: 14px;
+	}
+	
+	input[type="checkbox"] + label::before, &.gUniForm input[type="checkbox"] + label::before {
+	    margin-top: -2px;
+	}
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .section_bg .form_block {  
+	margin-left: 0;
+	padding-left: 0;
+	
+	.h2, h2 {
+	    font-size: 36px;
+	}
+    }
+    
+    .form_block {  
+	padding-top: 50px;
+	padding-bottom: 30px;
+	.h2 + p {
+	    font-size: 15px;
+	}
+	input, textarea, select {
+	    height: 41px;
+	    line-height: 39px;
+	    font-size: 16px;
+	}
+	.gUniForm input[type="text"] {
+	    height: 41px;
+	}
+	textarea {
+	    margin-left: 0;
+	}
+	button[type="submit"], .gUniForm button[type="submit"] {
+	    height: 41px;
+	    line-height: 39px;
+	}
+	input[type="checkbox"] + label, &.gUniForm input[type="checkbox"] + label {
+	    display: inline-block;
+	}
+	input[type="checkbox"] + label::before, &.gUniForm input[type="checkbox"] + label::before {
+	    margin-top: -5px;
+	    margin-bottom: 5px;
+	}
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .section_bg .form_block {  
+	.h2, h2 {
+	    font-size: 32px;
+	    margin-left: 0;
+	    letter-spacing: 1px;
+	}
+    }
+    .form_block {  
+	form {
+	    letter-spacing: 0.5px;
+	}
+	.h2 + p {
+	    font-size: 14px;
+	    letter-spacing: 0.5px;
+	}
+	input, textarea, select {
+	    margin: 0 0 30px 0;
+	    width: 100%;
+	    max-width: 320px;
+	}
+	textarea {
+	    margin-left: 0;
+	}
+    }
+    
+}
+
+@media screen and (max-width: 450px) {
+    .section_bg .form_block {  
+	.h2, h2 {
+	    font-size: 28px;
+	}
+    }
+    .form_block{
+	input[type="checkbox"] + label, &.gUniForm input[type="checkbox"] + label {
+	    display: block;
+	}
+    }  
+}
+
+
+
+/* end forms styles */
