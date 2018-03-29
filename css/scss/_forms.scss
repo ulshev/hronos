@@ -3,6 +3,45 @@
 .main_section.section_bg {
     background: url(images/form_bg.jpg) no-repeat center / cover;
 }
+#contacts_page .main_section.section_bg {
+    background: url(images/form_bg2.jpg) no-repeat center / cover;
+    color: $color_text;
+    z-index: 3;
+    
+    a {
+	color: $color_text;
+    }
+    
+    a.orange {
+	color: #fff;
+	text-decoration: none;
+    }
+    
+    input, textarea, select {
+	border-bottom: 1px solid $color_text;
+	&::-webkit-input-placeholder {opacity: 1; color: $color_text;}
+	&::-moz-placeholder          {opacity: 1; color: $color_text;}/* Firefox 19+ */
+	&:-moz-placeholder           {opacity: 1; color: $color_text;}/* Firefox 18- */
+	&:-ms-input-placeholder      {opacity: 1; color: $color_text;}
+    }
+    input[type="checkbox"] + label, &.gUniForm input[type="checkbox"] + label {
+	
+	&:before {
+	    border: 1px solid $color_text;
+	}
+    }
+    input[type="checkbox"]:checked + label, &.gUniForm input[type="checkbox"]:checked + label {
+	&:before {
+	    background: url(images/checkbox.png) no-repeat center;
+	    border-color: rgba(13, 157, 246, 0.6);
+	}
+    }
+    .form_block {  
+	.h2, h2 {
+	    color: $color_h;
+	}
+    }
+}
 .section_bg .form_block {  
     margin-left: 50%;
     padding-top: 100px;
@@ -15,6 +54,7 @@
 	letter-spacing: 3px;
 	margin-left: -5px;
 	margin-bottom: 5px;
+	color: #fff;
     } 
     
     .h2 + p {
@@ -73,6 +113,13 @@
 	padding: 5px 20px;
 	height: 49px;
     }
+    
+    .gUniForm input:focus, .gUniForm textarea:focus, .gUniForm select:focus {
+	border-color: transparent;
+	border-bottom: 1px solid #fff;
+	background-color: transparent;
+    }
+    
     textarea {
 	    margin-left: 0;
 	    height: 140px;
@@ -90,7 +137,7 @@
 	margin-right: 0;
     }
     
-    input[type="checkbox"] + label, &.gUniForm input[type="checkbox"] + label {
+    input[type="checkbox"]:not(checked) + label/*, &.gUniForm input[type="checkbox"]:not(checked) + label*/ {
 	display: inline-block;
 	//padding-left: 30px;
 	position: relative;
@@ -102,6 +149,7 @@
 	font-size: 16px;
 	margin-top: 10px;
 	cursor: pointer;
+	padding-left: 40px;
 	
 	
 	&:before {
@@ -110,32 +158,33 @@
 	    margin-right: 10px;
 	    width: 28px;
 	    height: 28px;
-	    
+	    background: none;
 	    border: 1px solid #fff;
-	    border-radius: 25px;
-	    
+	    border-radius: 25px !important;
+	    position: absolute;
+	    left: 0;
 	}
 	
 	&:hover:before {
 	    opacity: 0.8;
 	}
     }
-    //input[type="checkbox"]:not(checked) + label {
-	///&:hover:before {
-	    ///background-position: left top;
-	///}
-    //}
+    input[type="checkbox"]:not(checked) + label {
+	&:hover:before {
+	    background-position:  center;
+	}
+    }
     input[type="checkbox"]:checked + label {
 	&:before {
 	    background: url(images/checkbox.png) no-repeat center;
 	    border-color: rgba(13, 157, 246, 0.6);
 	}
     }
-    //input[type="checkbox"]:not(checked) + label {
-	//&:hover:before {
-	//    background-position: left bottom;
-	//}
-    //}
+    input[type="checkbox"]:checked + label {
+	&:hover:before {
+	    background-position:  center;
+	}
+    }
     input[type="checkbox"] + label + a {
 	display: inline-block;
 	//vertical-align: middle;
@@ -152,7 +201,7 @@
 	    resize: none;
 	    margin-bottom: 25px;
     }
-    button[type="submit"] {
+    button[type="submit"], .uFormSubmit {
 	    margin-right: 0;
 	    margin-bottom: 30px;
 	    padding: 0 10px 0 10px;
@@ -171,6 +220,7 @@
 	    text-align: center;
 	    position: relative;
 	    vertical-align: middle;
+	    text-decoration: none;
 	    
 	    &:after {
 		content: "";
@@ -181,8 +231,11 @@
 		vertical-align: -1px;
 		background: url(images/arrow_white.png) right center no-repeat;
 	}
+	&:hover {
+	    text-decoration: none;
+	}
     }
-    button.blue {
+    button.blue, .uFormSubmit.blue {
 	background: #0d9df6;
 	box-shadow: 0 4px 10px rgba(13,157,246,0.45);
 	border-bottom: 2px solid #0a5c8e;
@@ -194,7 +247,7 @@
 		box-shadow: 0 4px 10px rgba(13,157,246,0.65);
 	}
 }
-button.orange {
+button.orange, .uFormSubmit.orange {
 	background: #ff7b00;
 	box-shadow: 0 4px 10px rgba(255,139,0,0.45);
 	border-bottom: 2px solid #9f5500;
@@ -340,7 +393,7 @@ button.orange {
 	    height: 41px;
 	    line-height: 39px;
 	}
-	input[type="checkbox"] + label, &.gUniForm input[type="checkbox"] + label {
+	input[type="checkbox"] + label, &.gUniForm input[type="checkbox"]:not(checked) + label {
 	    display: inline-block;
 	}
 	input[type="checkbox"] + label::before, &.gUniForm input[type="checkbox"] + label::before {

@@ -1,7 +1,7 @@
 /* start popups styles */
 
 .gUniFormModalWindow {
-    background-color: rgba(2, 7, 17, 0.9);
+    background-color: rgba(0, 13, 36, 0.88);
     margin: 0;
     padding: 0;
     
@@ -12,22 +12,11 @@
 	border-radius: 0;
 	color: #fff;
 	background: #1598f3 url(images/m_window_bg.jpg) no-repeat center bottom/ cover;
-	&:after {
-	    content: "СИТ";
-	    position: absolute;
-	    top: 50%;
-	    left:60px;
-	    margin-top: -50px;
-	    color: $color_a;
-	    font-size: 180px;
-	    line-height: 100px;
-	    font-weight: 800;
-	}
 	
 	.gUniFormModalWindowExit {
 	    position: absolute;
-	    width: 24px;
-	    height: 24px;
+	    width: 23px;
+	    height: 23px;
 	    top:15px;
 	    right: 15px;
 	    cursor: pointer;
@@ -45,7 +34,7 @@
 	}
 	
 	.gUniFormContainer {
-	    margin-left: 50%;
+	    margin-left: 40%;
 	    padding: 90px 90px 50px 0;
 	    box-sizing: border-box;
 	}
@@ -72,15 +61,31 @@
 	}
 	
 	.gUniForm input[type="checkbox"] + label {
-	    margin-left: 0;
-	    letter-spacing: 0;
-	    margin-right: -30px;
+	    display: inline-block;
+	//padding-left: 30px;
+	position: relative;
+	//margin-left: -15px;
+	margin-bottom: 30px;
+	//vertical-align: middle;
+	border: 1px solid transparent;
+	font-weight: 300;
+	font-size: 16px;
+	margin-top: 10px;
+	cursor: pointer;
+	padding-left: 0;
 	    
 	    &:before {
-		background: url(images/checkbox.png) no-repeat left top;
-		width: 21px;
-		height: 21px;
-	    }
+	    content: '';
+	    float: left;
+	    margin-right: 10px;
+	    width: 28px;
+	    height: 28px;
+	    position: relative;
+	    
+	    border: 1px solid #fff;
+	    border-radius: 25px;
+	    
+	}
 	    
 	    &:hover:before {
 		opacity: 0.8;
@@ -88,7 +93,8 @@
 	}
 	.gUniForm input[type="checkbox"]:checked + label {
 	    &:before {
-		background-position: left bottom;
+		background: url(images/checkbox.png) no-repeat center;
+		border-color: rgba(13, 157, 246, 0.6);
 	    }
 	}
 	
@@ -104,47 +110,55 @@
 	.uFormSubmit {
 	    margin-right: 0;
 	    margin-bottom: 30px;
-	    padding: 0 10px 0 30px;
-	    width: 256px;
-	    height: 49px;
+	    padding: 0 10px 0 10px;
+	    width: 195px;
+	    height: 51px;
 	    line-height: 49px;
 	    font-size: 14px;
 	    font-weight: 400;
 	    background-color: #fff;
-	    color: $color_a;
+	    text-decoration: none;
+	    color: #fff;
 	    cursor: pointer;
 	    box-sizing: border-box;
-	    @include transition(background-color);
+	    @include transition(all);
 	    border: 0;
-	    border-radius: 25px;
+	    top: 0;
+	    border-radius: 3px;
 	    text-align: center;
 	    position: relative;
 	    vertical-align: middle;
+	    background: #ff7b00;
+	box-shadow: 0 4px 10px rgba(255,139,0,0.45);
+	border-bottom: 2px solid #9f5500;
 	
-	    &:before {
-		content: '';
-		position: absolute;
-		width: 42px;
-		height: 42px;
-		left: 4px;
-		top:4px;
-		background: $color_a url(images/icons.png) no-repeat 8px -96px;
-		border-radius: 21px;
-		@include transition(background-color);
+	background: -webkit-linear-gradient(right, #ff9c00 0%, #ff5b00 100%); /* для webkit-браузеров */
+	background: -moz-linear-gradient(right, #ff9c00 0%, #ff5b00 100%); /* для firefox 3.6+ */
+	background: -o-linear-gradient(right, #ff9c00 0%, #ff5b00 100%); /* для Opera 11.10+ */
+	background: -ms-linear-gradient(right, #ff9c00 0%, #ff5b00 100%); /* для IE10+ */
+	background: linear-gradient(to left, #ff9c00 0%, #ff5b00 100%);
+	
+	
+	    &:after {
+		content: "";
+		display: inline-block;
+		width: 11px;
+		height: 11px;
+		margin-left: 10px;
+		vertical-align: -1px;
+		background: url(images/arrow_white.png) right center no-repeat;
 	    }
 	}
 	.uFormSubmit:hover {
-	    background-color: $color_a;
-	    color: #fff;
-	    
-	    &:before {
-		background-color: #fff;
-		background-position: -36px -96px;
-		
-	    }
+	    background-color: #d46702;
+		background: -webkit-linear-gradient(right, #e68e04 0%, #c44600 100%); /* для webkit-браузеров */
+		background: -moz-linear-gradient(right, #e68e04 0%, #c44600 100%); /* для firefox 3.6+ */
+		background: -o-linear-gradient(right, #e68e04 0%, #c44600 100%); /* для Opera 11.10+ */
+		background: -ms-linear-gradient(right, #e68e04 0%, #c44600 100%); /* для IE10+ */
+		background: linear-gradient(to left, #e68e04 0%, #c44600 100%);
 	}
 	.uFormSubmit:active {
-	    background: #18b1ee;
+	    box-shadow: 0 4px 10px rgba(255,139,0,0.65);
 	}
     }
     
@@ -177,7 +191,7 @@
     
     .gUniFormSuccessBg {
 	height: 100%;
-	background: #5da0f3 url(images/success_bg.jpg) no-repeat center top / cover;
+	background: #5da0f3 url(images/success_bg.jpg) no-repeat center / cover;
     }
     
     .gUniFormSuccessMiddler {
@@ -211,35 +225,57 @@
     }
     
     .gUniFormSuccessButton {
-	padding: 0 19px;
+	margin-right: 0;
+	    margin-bottom: 30px;
+	    padding: 0 10px 0 10px;
+	    width: 165px;
+	    height: 51px;
+	    line-height: 49px;
+	    font-size: 14px;
+	    font-weight: 400;
+	    background-color: #fff;
+	    text-decoration: none;
+	    color: #fff;
+	    cursor: pointer;
+	    box-sizing: border-box;
+	    @include transition(all);
+	    border: 0;
+	    top: 0;
+	    border-radius: 3px;
+	    text-align: center;
+	    position: relative;
+	    vertical-align: middle;
+	    background: #ff7b00;
+	box-shadow: 0 4px 10px rgba(255,139,0,0.45);
+	border-bottom: 2px solid #9f5500;
 	
-        height: 47px;
-	min-width: 153px;
+	background: -webkit-linear-gradient(right, #ff9c00 0%, #ff5b00 100%); /* для webkit-браузеров */
+	background: -moz-linear-gradient(right, #ff9c00 0%, #ff5b00 100%); /* для firefox 3.6+ */
+	background: -o-linear-gradient(right, #ff9c00 0%, #ff5b00 100%); /* для Opera 11.10+ */
+	background: -ms-linear-gradient(right, #ff9c00 0%, #ff5b00 100%); /* для IE10+ */
+	background: linear-gradient(to left, #ff9c00 0%, #ff5b00 100%);
 	
-	display: inline-block;
-	vertical-align: top;
-	box-sizing: border-box;
 	
-	text-align: center;
-	text-decoration: none;
-	
-	font-size: 14px;
-	line-height: 47px;
-        font-weight: 300;
-	letter-spacing: 0.5px;
-	color: #fff;
-	background: $color_a;;
-	cursor: pointer;
-	border-radius: 25px;
-	box-shadow: 0 2px 0px rgba(0,0,0,0.1);
-	@include transition(all);
+	    &:after {
+		content: "";
+		display: inline-block;
+		width: 11px;
+		height: 11px;
+		margin-left: 10px;
+		vertical-align: -1px;
+		background: url(images/arrow_white.png) right center no-repeat;
+	    }
 	
 	&:hover {
-		background-color: #18b1ee;
-		opacity: 1;
+	    background-color: #d46702;
+		background: -webkit-linear-gradient(right, #e68e04 0%, #c44600 100%); /* для webkit-браузеров */
+		background: -moz-linear-gradient(right, #e68e04 0%, #c44600 100%); /* для firefox 3.6+ */
+		background: -o-linear-gradient(right, #e68e04 0%, #c44600 100%); /* для Opera 11.10+ */
+		background: -ms-linear-gradient(right, #e68e04 0%, #c44600 100%); /* для IE10+ */
+		background: linear-gradient(to left, #e68e04 0%, #c44600 100%);
 	}
 	&:active {
-		box-shadow: inset 0 0 25px rgba(0,0,0,0.1), 0 2px 2px rgba(0,0,0,0.1);
+	    box-shadow: 0 4px 10px rgba(255,139,0,0.65);
 	}
 	
     }

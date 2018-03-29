@@ -4,15 +4,29 @@
     margin-left: calc(50% + 30px);
     padding-top: 1px;
     clear: right;
+    float: none;
+    width: auto;
     
+    .sert {
+	    &:after {
+		display: none;
+	    }
+    }
     
+}
+
+.content .sertificates {
+    margin-top: -70px;
 }
     
 .sertificates {
     margin-bottom: 15px;
     padding-top: 20px;
     text-align: justify;
-	    top: -35px;
+    top: -35px;
+    float: right;
+    width: calc(50% - 30px);
+    margin-left: 50px;
     
         &.slick-slider .slick-list { 
             margin: 0px -20px;
@@ -23,11 +37,12 @@
             margin: 0 30px 25px;
             width: calc(20% - 30px);
             position: relative; 
-            @include transition(all);
-            background: #fff;
+            @include transition_slow(all);
+            //background: #fff;
             display: inline-block;
             vertical-align: top;
 	    position: relative;
+	    overflow: hidden;
 	    
 	    &:before {
 		content: '';
@@ -37,12 +52,13 @@
 		height: 0;
 		top: 0;
 		background: #1061c1 url(images/sert_hover.jpg) no-repeat center top / cover;
-		@include transition(all);
+		@include transition_slow(all);
 	    }
             
             &:hover{
                 box-shadow: 0px -10px 15px rgba(0, 0, 0, 0.21);
 		transform: scale(1.33);
+		overflow: visible;
 		
 		&:before {
 		    width: 95%;
@@ -50,6 +66,7 @@
 		    height: 111%;
 		    top: -6%;
 		}
+		
             }
             
             img {
@@ -60,8 +77,24 @@
                 display: block;
 		position: relative;
 		z-index: 2;
+	    
+		&:after {
+		    content: '';
+		    position: absolute;
+		    z-index: 3;
+		    width: 100%;
+		    height: 100%;
+		    top: 0;
+		    left: 0;
+		    background-color: #0f96ea;
+		    opacity: 0.2;
+		    @include transition_slow(all);
+		}
                 
                 &:hover{
+		    &:after {
+			opacity: 0;
+		    }
 		    
                 } 
                 
@@ -99,6 +132,9 @@
 	  
 	}
     }
+    .content .sertificates {
+	width: 35%;
+    }
 }
 @media screen and (max-width: 800px) {
     #index .sertificates {
@@ -106,6 +142,13 @@
 	margin-bottom: 0;
 	margin-top: -35px;
 	top: 0;
+    }
+    .content .sertificates {
+	width: auto;
+	float: none;
+	margin-top: -20px;
+	margin-bottom: -20px;
+	margin-left: 0;
     }
 }
 
@@ -120,6 +163,9 @@
 	    }
 	  
 	}
+    }
+    .content .sertificates {
+	margin-bottom: -40px;
     }
 }
 

@@ -1,15 +1,24 @@
 /* start advantages styles */
 
 #advantages {
-    //z-index: 2;
     overflow: hidden;
-    //background-color: #fff;
-    background: #fff url(images/advantages_bg.jpg) no-repeat center / cover;
-    padding-bottom: 300px;
-    margin-bottom: -300px;
+    background-color: #f4f7fb;
+    padding-bottom: 30px;
+    
+    &:before {
+	content: '';
+	position: absolute;
+	width: 400px;
+	max-width: 30%;
+	height: 800px;
+	top: 50%;
+	left: 0;
+	margin-top: -550px;
+	background: url(images/adv_img.png) no-repeat center / 100% auto;
+    }
     
     .in {
-	padding: 125px 20px 20px;
+	padding: 125px 20px 80px;
     }
     
     .left_block {
@@ -21,7 +30,21 @@
 	padding-top: 90px;
     }
     
-}    
+}
+#index #advantages {
+    background: #fff url(images/advantages_bg.jpg) no-repeat center / cover;
+    padding-bottom: 300px;
+    margin-bottom: -300px;
+    
+    &:before {
+	display: none;
+    }
+    
+    .in {
+	padding-bottom: 20px;
+    }
+    
+} 
     .advantages_block {
 	margin-left: 395/1560*100%;
 	margin-right: -50px;
@@ -103,10 +126,11 @@
 		text-transform: uppercase;
 		display: block;
 		font-size: 20px;
-		margin-bottom: 20px;
+		margin-bottom: 15px;
 		letter-spacing: 0.5px;
 		position: relative;
 		z-index: 5;
+		color: #002f7d;
 		
 		&:after {
 		    counter-increment: number;
@@ -121,6 +145,10 @@
 		margin-bottom: 0;
 		position: relative;
 		z-index: 5;
+		line-height: 140%;
+		max-height: 73px;
+		overflow: hidden;
+		color: 002f7d;
 	    }
 	}
     }
@@ -163,6 +191,10 @@
 @media screen and (max-width: 1300px){
     #advantages {
 	
+	&:before {
+	    margin-top: -570px;
+	}
+	
 	.advantages_block {
 	    max-width: 980px;
 	    
@@ -195,12 +227,18 @@
 			font-size: 21px;
 		    }
 		}
+		p {
+		    max-height: 60px;
+		}
 	    }
 	}
     }
 }
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 1000px) {
     #advantages {
+	&:before {
+	    margin-top: -590px;
+	}
 	.in {
 	    padding: 60px 20px 20px;
 	}
@@ -270,6 +308,7 @@
 		p {
 		    display: inline-block;
 		    max-width: 280px;
+		    min-height: inherit;
 		}
 	    }
 	}
@@ -279,6 +318,9 @@
 
 @media screen and (max-width: 800px) {
     #advantages {
+	&:before {
+	    display: none;
+	}
 	.in {
 	    padding: 40px 20px 20px;
 	}

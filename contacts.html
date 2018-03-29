@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU">
+<head>
+	<!--meta charset="cp-1251" /-->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width">
+	<title>Хронос</title>
+	
+	<!--[if lt IE 9]><script src="js/html5.js" type="text/javascript"></script><![endif]-->
+	
+	<link rel="stylesheet" type="text/css" href="css/slick.css"/>
+	<link rel="stylesheet" type="text/css"  media="all" href="css/jquery.fancybox.css" />
+	<link rel="stylesheet" type="text/css"  media="all" href="css/font.css" />
+	
+	<link rel="stylesheet" type="text/css"  media="all" href="template_styles.css" />
+	
+	<script type="text/Javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/Javascript" src="js/jquery-ui-1.12.1.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script> 
+	
+</head>
+<body id="contacts_page">
+    <div class="wrapper">
+	<!-- шапка -->
+	<header id="header">
+	    <div class="in">
+		
+		<div id="logo">
+		    <a href="index.html">
+			<img src="images/logo.png" alt="Хронос" />
+		    </a>
+		</div>
+		<a class="order_call" href="#"><span>Заказать звонок</span></a>
+		<div class="tel">
+		    <a href="tel:+78124082121">8 (812) 408-21-21</a>
+		</div>
+		<nav>
+		    <ul class="main_menu">
+			<li>
+			    <a href="index.html" title="Главная страница">Главная</a>
+			</li>
+			<li>
+			    <a href="products.html" title="Продукция">Продукция</a>
+			    
+			    <ul>
+				<li><a class="active" href="index.html">Голосообразующие аппараты</a></li>
+				<li><a href="index.html">Облучатели для лечения</a></li>
+				<li><a href="index.html">Лампа лечения псориаза</a></li>
+				<li><a href="index.html">Расчески для лечения</a></li>
+			    </ul>
+			</li>
+			<li>
+			    <a href="market.html" title="Интернет-магазин">Интернет-магазин</a>
+			</li> 
+			<li>
+			    <a href="about.html" title="О компании">О компании</a>
+			</li>
+			<li>
+			    <a href="partnership.html" title="Сотрудничество">Сотрудничество</a>
+			</li>
+			<li>
+			    <a href="blog.html" title="Блог">Блог</a>
+			</li>
+			<li>
+			    <a class="active" href="contacts.html" title="Контакты">Контакты</a>
+			</li>
+		    </ul>
+		    <span class="menu_button_mob">&nbsp;</span>
+		</nav>
+	    </div>
+	</header>
+	<!-- end шапка -->
+	
+	<div id="map">
+	    <div class="in" id="map_in">
+		
+	    </div>
+	</div>
+	
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAW5waRqX6v-9byeN0ppkdgxdLG-8MotM4&callback=initMap"></script>
+	
+	<script>
+	    function initMap() {
+		var uluru = {lat: 59.905899048726404, lng: 30.28925710224608};
+		var map = new google.maps.Map(document.getElementById('map_in'), {
+		  zoom: 11,
+		  center: uluru,
+		  styles: [
+		    {
+		      "featureType": "landscape.man_made",
+		      "elementType": "geometry.fill",
+		      "stylers": [
+			{
+			  "color": "#efefef"
+			}
+		      ]
+		    },
+		    {
+		      "featureType": "landscape.natural",
+		      "elementType": "geometry.fill",
+		      "stylers": [
+			{
+			  "color": "#efefef"
+			}
+		      ]
+		    },
+		    {
+		      "featureType": "poi",
+		      "stylers": [
+			{
+			  "visibility": "off"
+			}
+		      ]
+		    },
+		    {
+		      "featureType": "road.highway",
+		      "stylers": [
+			{
+			  "color": "#d9dcdb"
+			}
+		      ]
+		    },
+		    {
+		      "featureType": "road.highway",
+		      "elementType": "geometry.fill",
+		      "stylers": [
+			{
+			  "color": "#d3d3d3"
+			},
+			{
+			  "saturation": -100
+			},
+			{
+			  "lightness": 10
+			}
+		      ]
+		    },
+		    {
+		      "featureType": "road.highway",
+		      "elementType": "labels.text",
+		      "stylers": [
+			{
+			  "color": "#868a88"
+			},
+			{
+			  "visibility": "simplified"
+			}
+		      ]
+		    },
+		    {
+		      "featureType": "transit",
+		      "stylers": [
+			{
+			  "visibility": "off"
+			}
+		      ]
+		    },
+		    {
+		      "featureType": "water",
+		      "stylers": [
+			{
+			  "visibility": "on"
+			}
+		      ]
+		    },
+		    {
+		      "featureType": "water",
+		      "elementType": "geometry.fill",
+		      "stylers": [
+			{
+			  "color": "#3c8adb"
+			}
+		      ]
+		    }
+		  ]
+		});
+		var marker = new google.maps.Marker({
+		  position: uluru,
+		  map: map,
+		  icon: {
+		    url:'images/icon_map.png',
+		    anchor: new google.maps.Point(22, 24)
+		  },
+		});
+		
+	    }
+	</script>
+	
+        
+        
+        <div class="bread_crumbs">
+	    <div class="in">
+		<a href="index.html">Главная</a>
+		<span class="arr">&raquo;</span>
+		<span class="active">Контакты</span>
+	    </div>
+	</div>
+        
+        
+        <div class="content">
+	    <div class="in">
+		<span class="h1_bg">Контакты</span>
+		<h1>Контакты</h1>
+		
+		<div id="accordion">
+		    <div class="h5">Адрес фактический</div>
+		    <div class="text">
+			<p>198516, г. Санкт-Петербург, г. Петергоф, ул. Фабричная, д.1(Завод «Медтехника»)</p>
+		    </div>
+		    <div class="h5"> Адреса выдачи заказов</div>
+		    <div class="text">
+			<p>198516, г. Санкт-Петербург, г. Петергоф, ул. Фабричная, д.1(Завод «Медтехника»)</p>
+			<p>198516, г. Санкт-Петербург, г. Петергоф, ул. Фабричная, д.1(Завод «Медтехника»)</p>
+			<p>198516, г. Санкт-Петербург, г. Петергоф, ул. Фабричная, д.1(Завод «Медтехника»)</p>
+		    </div>
+		    <div class="h5">Адрес производства</div>
+		    <div class="text">
+			<p>198516, г. Санкт-Петербург, г. Петергоф, ул. Фабричная, д.1(Завод «Медтехника»)</p>
+		    </div>
+		    <div class="h5">Адрес для писем</div>
+		    <div class="text">
+			<p>198516, г. Санкт-Петербург, г. Петергоф, ул. Фабричная, д.1(Завод «Медтехника»)</p>
+		    </div>
+		    
+		</div>
+		
+		<div class="text blue">
+		    <div>
+			<h6>ТЕЛЕФОН</h6>
+			<p class="cont tel">
+			    <a href="tel:+78124082121">8 (812) 408-21-21</a><br>
+			    <a href="tel:+78124080762">8 (812) 408-07-62</a><br>
+			    <a href="tel:+78124085909">8 (812) 408-59-09</a>
+			</p>
+		    </div>
+		    <div>
+			<h6>режим работы</h6>
+			<p class="cont mode">ПН - ПТ  <strong>09:00  до 17:00</strong><br>
+			СБ - ВС  <strong>выходной</strong></p>
+		    </div>
+		    <div>
+			<h6>ПОЧТА</h6>
+			<p class="cont letter"><a href="mailto:golosmed@yandex.ru">golosmed@yandex.ru</a></p>
+		    </div>
+		</div>
+		<div class="text">
+		    <h5>Реквизиты</h5>
+		    <p><strong>ООО «Хронос»</strong><br>
+		    Юридический адрес: 198330, г. Санкт-Петербург, <br>
+		    ул. Десантников, д. 34, литер А.</p>
+		    
+		    <ul class="orange">
+			<li><strong>ОГРН</strong> 1097847097480</li>
+			<li><strong>ИНН</strong> 7807342661,</li>
+			<li><strong>КПП</strong> 780701001</li>
+		    </ul>
+		</div>
+        
+	    </div>
+	</div>
+	
+	
+	<!-- Заявка -->
+	<div class="main_section section_bg">
+	    
+	    <div class="in">
+		<div class="left_block">
+		    <img src="images/form_img.png" alt="">
+		</div>
+		
+		<div class="form_block">
+		    <div class="h2">Свяжитесь с нами</div>
+		    <p>Оставьте свои данные и&nbsp;наш менеджер свяжется с&nbsp;вами в&nbsp;ближайшее время.</p>
+		    <form  action="">
+			<input value="" placeholder="ФИО*" type="text">
+			<input value="" placeholder="Ваш телефон*" type="text">
+			<input id="agree2" value="" type="checkbox" checked="checked"> <label for="agree2">Я согласен на обработку</label> <a href="#">персональных&nbsp;данных</a>
+			<br>
+			<button class="orange" type="submit">Оставить заявку</button>
+		    </form>
+		    
+		</div>
+	    </div>
+	</div>
+        
+        
+        	
+	<!-- подвал -->
+	<div id="pre_foo"></div>
+	<footer>
+	    <div class="in">
+		<div class="foo_right">
+		    <address>
+			<p class="cont address">Спб, Петергофское шоссе, д, 73, Завод “ЛЭМЗ”</p>                     
+			<p class="cont tel">
+			    <a href="tel:+78124082121">8 (812) 408-21-21</a><br>
+			    <a href="tel:+78124080762">8 (812) 408-07-62</a><br>
+			    <a href="tel:+78124085909">8 (812) 408-59-09</a>
+			</p>
+			<p class="cont letter"><a href="mailto:golosmed@yandex.ru">golosmed@yandex.ru</a></p>
+		    </address>
+		    
+		    <div class="social">
+			<!--noindex-->
+			    <a rel="nofollow" title="ВКонтакте" href="#"><img src="images/vk.png" alt="VK" /><img class="hover" src="images/vk_hover.png" alt="VK" /></a>
+			    <a rel="nofollow" title="FaceBook" href="#"><img src="images/fb.png" alt="FB" /><img class="hover" src="images/fb_hover.png" alt="FB" /></a>
+			    <a rel="nofollow" title="Twitter" href="#"><img src="images/tw.png" alt="TW" /><img class="hover" src="images/tw_hover.png" alt="TW" /></a>
+			<!--/noindex-->
+		    </div>
+		</div>
+		<div class="foo_left">
+		    <div id="foo_logo">
+			<img src="images/foo_logo.png" alt="Хронос">
+		    </div>
+		    
+		    <p>Голосообразующие аппараты АГ-2000 для голоса, после рака гортани и удаления голосовых связок, производит только наша организация, продает через свой интернет-магазин и высылает наложенным платежом в любой город Российской Федерации с бесплатной доставкой.</p>
+		</div>
+		<nav class="foo_menu">
+		    <ul>
+			<li>
+			    <a class="active" href="index.html" title="Главная страница">Главная</a>
+			</li>
+			<li>
+			    <a href="market.html" title="Интернет-магазин">Интернет-магазин</a>
+			</li> 
+			<li>
+			    <a href="about.html" title="О компании">О компании</a>
+			</li>
+			<li>
+			    <a href="partnership.html" title="Сотрудничество">Сотрудничество</a>
+			</li>
+			<li>
+			    <a href="blog.html" title="Блог">Блог</a>
+			</li>
+			<li>
+			    <a href="contacts.html" title="Контакты">Контакты</a>
+			</li>
+		    </ul>
+		    <ul>
+			<li>
+			    <a href="products.html" title="Продукция">Продукция</a>
+			    
+			    <ul>
+				<li><a class="active" href="services.html">Голосообразующие аппараты АГ-2000</a></li>
+				<li><a href="services.html">Расчески для лечения</a></li>
+				<li><a href="services.html">Облучатели для лечения</a></li>
+				<li><a href="services.html">Лампа лечения псориаза</a></li>
+			    </ul>
+			</li>
+		    </ul>
+		</nav>
+		
+		<div id="copy" class="foo_left">
+		    Hronos, LLC.<br />
+		    Все права защищены © 2018
+		</div>
+		<div id="dev"><a href="#"><img src="images/logo_dv.png" alt="DIGITAL WEB" /></a></div>
+	    </div>
+	</footer>
+	<!-- end подвал -->
+	
+	
+    </div>
+</body>
+</html>

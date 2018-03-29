@@ -1,240 +1,237 @@
 /* start contacts styles */
 
 #contacts_page {
-    main {
-	&:after {
-	    @include clear();
-	}
+    .wrapper {background: none;}
+    .content {
+	background-color: #fff;
 	
 	.in {
-	    position: static;
-	    &:after {
-		display: none;
-	    }
+	    max-width: 1600px;
+	    box-sizing: border-box;
+	}
+    }
+    #accordion {
+	margin-right: calc(50% + 60px);
+    }
+    
+    .text.blue {
+	margin-right: calc(50% + 60px);
+	padding-top: 20px;
+	padding-bottom: 1px;
+	position: relative;
+	margin-bottom: 25px;
+	
+	&:before {
+	    position: absolute;
+	    width: 1000%;
+	    right: 0;
+	    top: 0;
+	    content: '';
+	    height: 100%;
+	    background-color: #f4f7fb;
 	}
 	
-	.text {
+	* {
 	    position: relative;
-	    float: left;
-	    margin: 40px 0;
-	    padding: 45px 0;
-	    z-index: 2; 
-	    width: 445px;
-	    
-	    address {
-		padding: 35px 25px 35px 45px;
-		box-shadow: 0 4px 57px rgba(0,0,0,0.26);
-		position: relative;
-		z-index: 2;
-		display: block;
-		font-style: normal;
-		box-sizing: border-box;
-		color: #fff;
-		background: #487ffb;
-		background: -webkit-linear-gradient(60deg, rgba(72,127,251, 0.89) 0%, rgba(101,179,252, 0.89) 100%); /* для webkit-браузеров */
-	background: -moz-linear-gradient(60deg, rgba(72,127,251, 0.89) 0%, rgba(101,179,252, 0.89) 100%); /* для firefox 3.6+ */
-	background: -o-linear-gradient(60deg, rgba(72,127,251, 0.89) 0%, rgba(101,179,252, 0.89) 100%); /* для Opera 11.10+ */
-	background: -ms-linear-gradient(60deg, rgba(72,127,251, 0.89) 0%, rgba(101,179,252, 0.89) 100%); /* для IE10+ */
-	background: linear-gradient(60deg, rgba(72,127,251, 0.89) 0%, rgba(101,179,252, 0.89) 100%);
+	    z-index: 2;
+	}
 	
+	>div {
+	    display: inline-block;
+	    //width: 30%;
+	    vertical-align: top;
+	    margin-right: 4%;
+	    margin-bottom: 15px
+	}
 	
-		a {
-		    color: #fff;
-		    text-decoration: underline;
-		    
-		    &:hover {
-			text-decoration: none;
-		    }
-		    
-		    &.button {
-			text-decoration: none;
-		    }
-		}
-		p {
-		    margin-bottom: 20px;
-		}
-	    }
+	h6 {
+	    padding-left: 25px;
+	    text-transform: uppercase;
+	    font-weight: 700;
+	    margin-bottom: 5px;
+	    font-size: 130%;
+	}
+	
+	.cont {
+	    padding-left: 25px;
+	    margin: 0;
+	    font-size: 115%;
+	    line-height: 190%;
+	    text-align: left;
+	    float: none;
+	    padding-top: 0;
 	    
 	    &:before {
 		content: '';
 		position: absolute;
-		top: 0;
-		right: 0;
-		//width: 300px;
-		height: 100%; //580px;
-		//background-color: #d1ddde;
-		border-top: 45px solid transparent;
-		border-bottom: 45px solid transparent;
-		border-left: 300px solid #d1ddde;
-		z-index: 1;
-		box-sizing: border-box;
-		
-	    }
-	}
-	
-    }
-    
-    
-    .section_bg {
-	background: url(images/contacts_page_form_bg.jpg) no-repeat center / cover;
-	&:after {
-	    display: none;
-	}
-	
-	.left_block {
-	    padding-top: 200px;
-	    max-width: 400px;
-	    
-	    .h1 {
-		text-align:  left;
-	    }
-	}
-	
-	.form_block {
-	    padding-top: 80px;
-	}
-	
-    }
-
-    
-} 
-    
-
-	main .cont {
-	    padding: 0 0 0 35px;
-	    font-size: 14px;
-	    line-height: 145%;
-	    position: relative;
-	    
-	    &:before {
-		position: absolute;
+		top: 5px;
+		margin-top: 0px;
 		left: 0;
-		top: -2px;
-		content: '';
-		width: 25px;
-		height: 25px;
-		background: url(images/icons.png) no-repeat 0 0;
-		opacity: 0.72;
+		width: 17px;
+		height: 14px;
+		background: url(images/icons_cont.png) no-repeat;
 	    }
 	    
 	    &.tel:before {
-		background-position: -28px -25px;
+		background-position: left top;
 	    }
-	    &.fax:before {
-		background-position: -28px -53px;
+	    &.mode:before {
+		background-position: left center;
 	    }
-	    &.address:before {
-		background-position: -28px -166px;
-		top: 0;
-	    }
-	    &.time:before {
-		background-position: -28px -199px;
-	    }
-	    &.mail:before {
-		background-position: -28px -78px;
-		top: 0;
+	    &.letter:before {
+		background-position: left bottom;
 	    }
 	}
+	
+	
+	a {
+	    color: $color_text;
+	}
+    }
     
+    .text.blue + .text {
+	font-size: 115%;
+	margin-bottom: 30px;
+	
+	h5 {
+	    text-transform: uppercase;
+	    font-size: 145%;
+	    font-weight: 700;
+	}
+    }
+    
+}
+    
+  
 .map, #map {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: 0;
-    top: 0px;
-    left: 0;
-    background: url(images/map.jpg) no-repeat center bottom;
+    width: 50%;
+    float: right;
+    position: relative;
+    z-index: 3;
+    padding-top: 105px;
+    margin-bottom: -1px;
+    
+    &:before {
+	    position: absolute;
+	    content: '';
+	    width: 100% - 160/960*100%;
+	    height: 130%;
+	    background: #1d53b0 url(images/map_bg.jpg) no-repeat left top / cover;
+	    left: 160/960*100%;
+	    top: 0;
+	    z-index: 0;
+	    
+	}
+    
+    .in {
+	width: calc(100% - 60px);
+	max-width: 740px;
+	z-index: 1;
+	margin-bottom: 55px;
+	margin-left: 0;
+	height: 690px;
+	
+	&:after {
+	    padding-top: 100%;
+	}
+    }
 	
 	
     iframe {
 	height: 100%;
 	width: 100%;
+	top: 0;
+	left: 0;
 	border: 0;
+	position: absolute;
     }
 }
+
+#map div[id*="bx_"]{
+            height: 100%;
+          }
+          .bx-yandex-view-layout{
+            height: 100%;
+          }
+          .bx-yandex-view-map{
+            height: 100%;
+          }
 
 
 
 
 @media screen and (max-width: 1600px) {
-    #contacts {
-	
-	
-    }  
+    #contacts_page {
+	#accordion, .text.blue {
+	    margin-right: calc(40% + 20px);
+	}
+    }
+    
+    .map, #map {
+	width: 40%;
+    }
 }
 
 @media screen and (max-width: 1300px)  {
-    #contacts {
-	
-    } 
+    #contacts_page {
+	#accordion, .text.blue {
+	    margin-right: calc(45% + 20px);
+	}
+    }
+    
+    .map, #map {
+	width: 45%;
+    }
 }
 @media screen and (max-width: 999px) {
     #contacts_page {
-	main {
-	    
-	    .text {
-		width: 50%;
-	    }
-	}
+	
     }
 }
 
 
 @media screen and (max-width: 800px) {
-    #contacts {
+    #contacts_page {
+	#accordion, .text.blue {
+	    margin-right: 0;
+	}
 	
-    } 
+	.content {
+	    padding-bottom: 50px;
+	}
+    }
+    
+    .map, #map {
+	width: 100%;
+	float: none;
+	padding-top: 50px;
+	padding-bottom: 1px;
+	
+	.in {
+	    width: calc(100% - 80px);
+	    min-height: 150px;
+	    margin-left: 20px;
+	    
+	    &:after {
+		padding-top: 50%;
+	    }
+	}
+    }
 }
 
 @media screen and (max-width: 590px) {
-    #contacts_page {
-	main {
-	    
-	    .text {
-		margin: 20px 0 250px;
-		padding: 0px 0;
-		width: auto;
-		
-		&:before {
-		    display: none;
-		}
-		
-		address {
-		    padding: 20px;
-		    background: linear-gradient(60deg, rgba(72, 127, 251, 0.95) 0%, rgba(101, 179, 252, 0.95) 100%);
-		}
-	    }
-	    
-	}
-	
-	
-	.section_bg {
-	    background: url(images/contacts_page_form_bg.jpg) no-repeat center / cover;
-	    &:after {
-		display: none;
-	    }
-	    
-	    .left_block {
-		padding-top: 200px;
-		max-width: 400px;
-		
-		.h1 {
-		    text-align:  left;
-		}
-	    }
-	    
-	    .form_block {
-		padding-top: 80px;
-	    }
-	    
-	}
-    
-	
-    }  
 }
 
-//@media screen and (max-width: 450px) {
-    
-//}
+@media screen and (max-width: 450px) {
+    .map, #map {
+	
+	.in {
+	    
+	    &:after {
+		padding-top: 80%;
+	    }
+	}
+    }
+}
 
 /* end contacts styles */

@@ -16,7 +16,7 @@
     
     .link {
         float: right;
-	font-size: 20px;
+	font-size: 18px;
 	margin-top: 10px;
 	text-decoration: underline;
 	
@@ -25,23 +25,64 @@
 	}
     }
 }
-.blog_slider {
+
+.blog.blog_slider {
     clear: left;
-    margin: -20px -20px 0;
     .slick-list {
-	margin: 0 -140px;
+	margin: 0 -150px;
+    }
+    
+    .slide {
+	width: 374px;
+	margin: 20px 110px;
+    }
+}
+
+#blog_page .blog {
+    .slide {
+	
+	&:nth-child(2), &:nth-child(8) {
+	    width: calc(50% - 20px);
+	    color: #fff;
+	    
+	    > div {
+		background: #0c3574 url(images/blog_big.jpg) no-repeat left center/ cover;
+	    }
+	    
+	    h4 {
+		font-size: 30px;
+		height: 75px;
+		margin-bottom: 0;
+		line-height: 120%;
+		a {
+		    color: #fff;
+		}
+	    }
+	    
+	    time {
+		color: #fff;
+	    }
+	}
+    }
+}
+.blog {
+    margin: -20px -10px 0;
+    
+    &:after {
+	@include clear();
     }
     
     .slide {
         float: left;
         position: relative;
         height: 400px;
-	width: 374px;
-	margin: 20px 110px;
+	width: calc(25% - 20px); //374px;
+	margin: 20px 10px;
         @include transition_slow(all);
         background: #fff;
 	color: #999999;
-	box-shadow: 0 0 30px rgba(0,0,0,0.07);
+	box-shadow: 0 0 30px rgba(0,0,0,0.14);
+	
 	
 	> div {
 	    height: 100%;
@@ -50,6 +91,7 @@
 	    @include transition_slow(all);
 	    box-sizing: border-box;
 	    padding: 25px;
+	    overflow: hidden;
 	    
 	    p {
 		max-width: 325px;
@@ -71,7 +113,7 @@
 	
 	h4 {
 	    margin-bottom: 20px;
-	    height: 55px;
+	    height: 54px;
 	    overflow: hidden;
 	    @include transition_slow(all);
 	    a {
@@ -95,13 +137,16 @@
 	box-shadow: none;
 	
 	> div {
-	    background-color: #0c3574;
+	    background: #0c3574 url(images/blog_big.jpg) no-repeat left center/ cover;
 	    margin: 0 -198px;
-	    box-shadow: 0 0 30px rgba(0,0,0,0.07);
+	    box-shadow: 0 0 30px rgba(0,0,0,0.14);
 	}
 	
 	h4 {
 	    font-size: 30px;
+	    height: 75px;
+	    margin-bottom: 0;
+	    line-height: 120%;
 	    a {
 		color: #fff;
 	    }
@@ -116,7 +161,7 @@
     
 
 	.slick-arrow {
-	    top: -20px;
+	    top: -23px;
 	}
 	.slick-prev {
 	    right: 182px;
@@ -135,9 +180,9 @@
 }
 
 @media screen and (max-width: 1300px){
-    .blog_slider {
+    .blog.blog_slider {
 	.slick-list {
-	    margin: 0 -120px;
+	    margin: 0 -130px;
 	}
 	
 	.slide {
@@ -153,9 +198,9 @@
 }
 
 @media screen and (max-width: 1150px){
-    .blog_slider {
+    .blog.blog_slider {
 	.slick-list {
-	    margin: 0 -90px;
+	    margin: 0 -100px;
 	}
 	
 	.slide {
@@ -176,10 +221,10 @@
 	    padding: 35px 20px 60px;
 	}
     }
-    .blog_slider {
+    .blog.blog_slider {
 	margin-top: 0;
 	.slick-list {
-	    margin: 0 0px 0 -90px;
+	    margin: 0 0px 0 -100px;
 	}
 	
 	.slide {
@@ -195,7 +240,7 @@
 	
 	.slick-center {
 	    > div {
-		margin: 0 -88px;
+		margin: 0 -98px;
 	    }
 	    h4 {
 		height: 75px;
@@ -206,11 +251,29 @@
 	    top: -27px;
 	}
     }
+    
+    #blog_page .blog {
+	.slide {
+	    width: calc(33% - 20px);
+	    &:nth-child(2), &:nth-child(8) {
+		width: calc(33% - 20px);
+		h4 {
+		    height: 54px;
+		    font-size: 20px;
+		    line-height: 125%;
+		    margin-bottom: 20px;
+		}
+	    }
+	}
+    }
 }
 @media screen and (max-width: 800px) {
-    .blog_slider {
+    .blog.blog_slider {
     
 	.slide {
+	    h4 {
+		    height: 50px;
+		}
 	    p {
 		height: 95px;
 	    }
@@ -221,6 +284,23 @@
 	font-size: 20px;
 	margin-top: 10px;
     }
+    #blog_page .blog {
+	.slide {
+	    width: calc(50% - 20px);
+	    &:nth-child(2), &:nth-child(8) {
+		width: calc(50% - 20px);
+		h4 {
+		    height: 50px;
+		    font-size: 19px;
+		    line-height: 125%;
+		    margin-bottom: 20px;
+		}
+	    }
+	    p {
+		height: 95px;
+	    }
+	}
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -229,7 +309,7 @@
 	    padding: 35px 20px 30px;
 	}
     }
-    .blog_slider {
+    .blog.blog_slider {
 	margin-top: 0;
 	.slick-list {
 	    margin: 0 0px 0 0px;
@@ -255,8 +335,30 @@
     }
 }
 
+@media screen and (max-width: 590px) {
+    .blog {
+    
+	.slide {
+	    h4 {
+		    height: 60px;
+		}
+	}
+    }
+    #blog_page .blog {
+	.slide {
+	    &:nth-child(2), &:nth-child(8) {
+		h4 {
+		    font-size: 16px;
+		    line-height: 125%;
+		    height: 60px;
+		}
+	    }
+	}
+    }
+}
+
 @media screen and (max-width: 450px) {
-    .blog_slider {
+    .blog.blog_slider {
 	.slide {
 
 	    time {
@@ -271,6 +373,18 @@
 	    h4 {
 		font-size: 20px;
 		height: 50px;
+	    }
+	}
+    }
+    
+    #blog_page .blog {
+	.slide {
+	    width: calc(100% - 20px);
+	    &:nth-child(2), &:nth-child(8) {
+		width: calc(100% - 20px);
+	    }
+	    p {
+		height: 95px;
 	    }
 	}
     }

@@ -4,8 +4,29 @@
     overflow: hidden;
     //z-index: 2;
     height: 414px;
-    background-color: #f4f7fb;
+    background-color: #fff;
     @include transition_slow(all);
+    
+    .in {
+	padding: 103px 20px;
+	z-index: 2;
+	
+	&:after {
+	    display: none;
+	}
+    }
+    .left_block {
+	width: 395/1560*100%;
+	@include transition_slow(all);
+    }
+    .client {
+	width: auto;
+	margin: 0 20px 0;
+    }
+    
+}
+#index #clients {
+    background-color: #f4f7fb;
     
     &:before {
 	content: '';
@@ -18,22 +39,9 @@
 	z-index: 1;
 	@include transition_slow(all);
     }
-    .in {
-	padding: 103px 20px;
-	z-index: 2;
-	
-	&:after {
-	    display: none;
-	}
-    }
+    
     .left_block {
-	width: 395/1560*100%;
 	color: #fff;
-	@include transition_slow(all);
-    }
-    .client {
-	width: auto;
-	margin: 0 20px 0;
     }
     
 }
@@ -107,7 +115,7 @@
     }
 
 @media screen and (max-width: 1600px) {
-    #clients {
+    #index #clients {
 	
 	&:before {
 	    width: 550/1560*100%; 
@@ -131,10 +139,13 @@
 }
 
 @media screen and (max-width: 1300px){
-    #clients {
+    #index #clients {
 	&:before {
 	    width: 740/1560*100%; 
 	}
+    }
+    
+    #clients {
 	
 	.left_block {
 	    width: 450/1560*100%;
@@ -150,11 +161,12 @@
     
 }
 @media screen and (max-width: 1000px) {
-    #clients {
+    #index #clients {
 	&:before {
 	    width: 850/1560*100%; 
 	}
-	
+    }
+    #clients {
 	.left_block {
 	    width: 450/1560*100%;
 	    margin-top: -50px;
@@ -169,14 +181,15 @@
 
 }
 @media screen and (max-width: 800px) {
+    #index #clients {
+	&:before {
+	    width: 1050/1560*100%; 
+	}
+    }
     #clients {
 	height: 314px;
 	.in {
 	    padding: 73px 20px;
-	}
-	
-	&:before {
-	    width: 1050/1560*100%; 
 	}
 	
 	.left_block {
@@ -193,17 +206,20 @@
 }
 
 @media screen and (max-width: 599px) {
+    #index #clients {
+	&:before {
+	    width: 110%;
+	    height: 55%;
+	    background-position: right top;
+	}
+    }
     #clients {
 	height: 414px;
 	.in {
 	    padding: 73px 20px;
 	}
 	
-	&:before {
-	    width: 110%;
-	    height: 55%;
-	    background-position: right top;
-	}
+	
 	
 	.left_block {
 	    width: auto;
@@ -224,14 +240,16 @@
 }
 
 @media screen and (max-width: 450px) {
+    #index #clients {
+	&:before {
+	    height: 65%;
+	}
+    }
+    
     #clients {
 	height: 414px;
 	
-	&:before {
-	    width: 110%;
-	    height: 65%;
-	    background-position: right top;
-	}
+	
 	
 	.left_block {
 	    width: auto;
