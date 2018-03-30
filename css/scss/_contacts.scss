@@ -91,7 +91,7 @@
     
     .text.blue + .text {
 	font-size: 115%;
-	margin-bottom: 30px;
+	//margin-bottom: 30px;
 	
 	h5 {
 	    text-transform: uppercase;
@@ -206,11 +206,19 @@
 	float: none;
 	padding-top: 50px;
 	padding-bottom: 1px;
+	overflow: hidden;
+	max-height: 500px;
 	
 	.in {
 	    width: calc(100% - 80px);
 	    min-height: 150px;
 	    margin-left: 20px;
+	    overflow: hidden;
+	    max-height: 400px;
+	    
+	    iframe {
+		margin-top: -50px;
+	    }
 	    
 	    &:after {
 		padding-top: 50%;

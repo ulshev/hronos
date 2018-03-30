@@ -72,6 +72,12 @@ background: url(images/inner_bg.jpg) center top no-repeat;
 	display: table;
 	height: 100%;
 }
+@media screen and (max-width: 1030px) {
+	.wrapper {
+		padding-top: 60px;
+	}	
+}
+
 a {
     text-decoration: none;
     color: $color_a;
@@ -144,7 +150,7 @@ h6, .h6 {
 	    line-height: 180%;
 	}
     h1, .h1 {
-	font-size: 31px;
+	font-size: 30px;
 	line-height: 120%;
     }
 	
@@ -164,8 +170,10 @@ h6, .h6 {
 }
 @media screen and (max-width: 590px) {
     h1, .h1 {
-	font-size: 27px;
+	font-size: 25px;
 	line-height: 120%;
+	letter-spacing: 1px;
+	margin-right: -10px;
     }
 	
     h2, .h2 {

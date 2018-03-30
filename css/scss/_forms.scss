@@ -432,7 +432,8 @@ button.orange, .uFormSubmit.orange {
 }
 
 @media screen and (max-width: 450px) {
-    .section_bg .form_block {  
+    .section_bg .form_block {
+	text-align: center;
 	.h2, h2 {
 	    font-size: 28px;
 	}

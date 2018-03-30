@@ -826,6 +826,7 @@ aside {
     }
     
     .content {
+	padding-bottom: 50px;
 	.h1_bg {
 	    font-size: 95px;
 	    line-height: 45%;
@@ -1044,10 +1045,22 @@ aside {
 }
 
 @media screen and (max-width: 450px) {
+    .bread_crumbs {
+    margin-bottom: 20px;
+    }
     .content {
 	.h1_bg {
 	    font-size: 45px;
 	    line-height: 90%;
+	}
+	
+	h1 {
+	    margin-bottom: 20px;
+	}
+	
+	.date time {
+	    top:
+	    -10px;
 	}
     }
     .block404 {

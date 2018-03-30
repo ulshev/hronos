@@ -431,19 +431,24 @@ footer {
     footer {
         .foo_left p {
 	    display: none;
+	    max-width: none;
+	    text-align: center;
 	}
 	
 	.foo_left, #foo_logo, #copy {
             width: auto;
             float: none;
 	    margin-bottom: 20px;
+	    text-align: center;
+	    padding-right: 0;
         }
         .foo_right, #dev {
             width: auto;
             float: none;
-	    text-align: left;
+	    text-align: center;
 	    margin-top: 0;
 	    margin-left: 0;
+	    max-width: none;
         }
 	#foo_logo {
 	    padding-bottom: 0px;
@@ -451,13 +456,18 @@ footer {
 	.foo_right {
            margin-bottom: 20px;
         }
-	address .tel {
-	    margin-left: 0;
-	    
-	    &:before {
-		left: 0;
-		right: auto;
+	address {
+	    text-align: center;
+	    .tel {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 115px;
+		&:before {
+		    left: 0;
+		    right: auto;
+		}
 	    }
+	    
 	}
 	.tel, a.button, address p  {
 	    margin-bottom: 15px;
